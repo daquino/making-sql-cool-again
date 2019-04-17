@@ -1,0 +1,16 @@
+{
+  "name": "msp-action-data",
+  "version": "1.0.0",
+  "description": "Loads a specific number of random actions.  Intended to be used to load a large number of actions into a Postgres DB to test performance of queries.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "repository": {},
+  "author": "Daniel Aquino",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.4.3"
+  }
+}
