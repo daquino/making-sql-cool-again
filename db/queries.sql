@@ -51,3 +51,14 @@ SELECT p.name,p.price,avg(r.rating)
   GROUP BY p.id
   OFFSET 0
   FETCH first 20 ROWS only;
+
+
+-- Making the join slow again with order
+select p.name,p.price,avg(r.rating)
+  from product p
+  join product_review r on (p.id=r.product_id)
+  where p.category = 'ELECTRONICS' and p.price >= 500 and price < 1000
+  group by p.id
+  order by p.price
+  offset 0
+  fetch first 20 rows only;
